@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uwu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e5dee7;
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #d0b1f8;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        button {
+            background-color: rgb(102, 71, 138);
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: darkviolet;
+        }
+
+        #response {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="response">do you miss me??? ^o^</div>
+        <button id="yesButton" onclick="nextStep('yes???')">Yes</button>
+        <button id="noButton" onclick="nextStep('no ToT ))')">No</button>
+    </div>
+
+    <script>
+        let step = 0;
+
+        function nextStep(answer) {
+            if (step === 0) {
+                if (answer === 'yes???') {
+                    document.getElementById("response").innerText = "really?????";
+                    step = 1;
+                } else {
+                    document.getElementById("response").innerText = "oh....:(((";
+                    document.getElementById("yesButton").style.display = 'none';
+                    document.getElementById("noButton").style.display = 'none';
+                }
+            } else if (step === 1) {
+                if (answer === 'yes') {
+                    document.getElementById("response").innerText = "oh..";
+                    document.getElementById("yesButton").style.display = 'none';
+                    document.getElementById("noButton").style.display = 'none';
+                } else {
+                    document.getElementById("response").innerText = "I LOVE YOUUUUUUU";
+                    document.getElementById("yesButton").style.display = 'none';
+                    document.getElementById("noButton").style.display = 'none';
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
